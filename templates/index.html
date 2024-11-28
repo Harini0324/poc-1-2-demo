@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Detection & Anti-Spoofing</title>
+    <style>
+        body {
+            background-color: #e9d4b9;
+            color: #333;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            text-align: center;
+            color: #021f3c;
+        }
+
+        #video {
+            width: 640px;
+            height: 480px;
+            border: 5px solid #ddd;
+            vertical-align: middle;
+        }
+
+        #canvas {
+            display: none;
+        }
+
+        #output {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #ebeef0;
+            color: #034586;
+        }
+
+        #capture {
+            background-color: #2d89cf; 
+            color: #fff; 
+            padding: 10px 20px;
+            border: none;
+            align-items: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Face Detection & Anti-Spoofing</h1>
+    <video id="video" autoplay></video>
+    <br>
+    <button id="capture">Capture Image</button>
+    <canvas id="canvas"></canvas>
+    <div id="output"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/opencv.js/4.8.0/opencv.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
